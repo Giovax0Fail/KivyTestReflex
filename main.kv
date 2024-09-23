@@ -1,0 +1,74 @@
+MDBoxLayout:
+    orientation: 'vertical'
+
+    MDTopAppBar:
+        title: "ReflexTest"
+        elevation: 0
+        pos_hint: {"top": 1}
+        md_bg_color: app.theme_cls.primary_color
+
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.1
+        padding: [3, 0, 3, 0]  # Padding di 3px a sinistra e a destra
+        spacing: 3  # Spazio di 3px tra i pulsanti
+
+
+        MDRaisedButton:
+            text: "Info"
+            md_bg_color: 0, 0.55, 0.8, 1
+            pos_hint: {"center_x": 0.9, "center_y": 0.5}
+            on_release: app.show_dialog()
+        
+        MDRaisedButton:
+            text: "I tuoi riflessi"
+            md_bg_color: 0, 0.55, 0.8, 1
+            pos_hint: {"center_x": 0.9, "center_y": 0.5}
+        
+        MDRaisedButton:
+            text: "Classifica"
+            md_bg_color: 0, 0.55, 0.8, 1
+            pos_hint: {"center_x": 0, "center_y": 0.5}
+    
+
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: dp(30)
+        spacing: dp(5)
+        size_hint_y: 0.9  # 50% dello spazio rimanente
+        md_bg_color: 0, 0.55, 0.8, 1
+
+
+        MDGridLayout:
+            cols: 3
+            spacing: dp(10)
+            size_hint_y: 0.9  # 80% dell'area dei pulsanti
+
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
+            MDFillRoundFlatButton:
+                text: ''
+                size_hint: 1, 1
