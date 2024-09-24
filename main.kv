@@ -13,7 +13,6 @@ MDBoxLayout:
         padding: [3, 0, 3, 0]  # Padding di 3px a sinistra e a destra
         spacing: 3  # Spazio di 3px tra i pulsanti
 
-
         MDRaisedButton:
             text: "Info"
             md_bg_color: 0, 0.55, 0.8, 1
@@ -27,11 +26,18 @@ MDBoxLayout:
             on_release: app.show_info()
         
         MDRaisedButton:
-            text: "I tuoi Riflessi"
+            text: "Tutti i giocatori"
             md_bg_color: 0, 0.55, 0.8, 1
             pos_hint: {"center_x": 0, "center_y": 0.5}
-    
+            on_release: app.show_leaderboard()
 
+    MDRaisedButton:
+        text: "Inizia il gioco"
+        md_bg_color: 0, 0.55, 0.8, 1
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        padding: [0, 2]
+        margin: [0, 2]
+        on_release: app.start_game()
 
     MDBoxLayout:
         orientation: 'vertical'
@@ -40,36 +46,46 @@ MDBoxLayout:
         size_hint_y: 0.9  # 50% dello spazio rimanente
         md_bg_color: 0, 0.55, 0.8, 1
 
-
         MDGridLayout:
+            id: grid_layout  # Aggiungi un ID per il layout a griglia
             cols: 3
             spacing: dp(10)
             size_hint_y: 0.9  # 80% dell'area dei pulsanti
 
             MDFillRoundFlatButton:
+                id: btn1
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn2
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn3
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn4
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn5
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn6
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn7
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn8
                 text: ''
                 size_hint: 1, 1
             MDFillRoundFlatButton:
+                id: btn9
                 text: ''
                 size_hint: 1, 1
+            
