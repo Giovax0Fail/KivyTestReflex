@@ -33,6 +33,21 @@ class Reflex(MDApp):
     def close_dialog(self, *args):
         self.dialog.dismiss()
 
+    info_dialog = None
+
+    def show_info(self):
+        if not self.info_dialog:
+            self.dialog = MDDialog(
+                title="Team Di Sviluppo",
+                text=" \n\n Pietro Vergara \n\n Giovanni Ferrante \n\n Mattia Capasso",
+                buttons=[
+                    MDRaisedButton(
+                        text="CHIUDI",
+                        on_release=self.close_dialog
+                    ),
+                ],
+            )
+        self.dialog.open()
 
 if __name__ == '__main__':
     Reflex().run()
